@@ -39,4 +39,4 @@ async def get_cleaned_splits(message_content):
         cleaned_splits.append(split.strip())
     return cleaned_splits
 
-client.run(os.getenv('TOKEN'))
+client.run(os.getenv('MARGE_TOKEN'))
