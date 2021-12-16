@@ -1,5 +1,6 @@
 import discord
 import os
+import random
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
@@ -21,12 +22,18 @@ async def get_members():
 
 @client.event
 async def on_message(message):
-    #channel = client.get_channel(812906949124423700)
     if message.author == client.user:
         return
 
     if 'dental plan'.encode('ascii', 'ignore') in message.content.lower().encode('ascii', 'ignore') and message.guild:
-        await message.channel.send('Lisa Needs Braces')
+        if random.randint(0,100) < 5:
+            await message.reply('You think you know about pain? \
+Talk to my second wife. She does. Or she thinks she does. \
+She says that once when she was nineteen or twenty she got between a couple of cats fighting – her own cat and a neighbor’s – and one of them went at her, climbed her like a tree, tore gashes out of her thighs and breasts and belly that you still can see today, scared her so badly she fell back down her again, all tooth and claw and spitting fury. Thirty-six stitches I think she said she got. And a fever that lasted days. \
+My second wife says that’s pain. \
+She doesn’t know shit, that woman. My existence is pain')
+        else:
+            await message.channel.send('Lisa Needs Braces')
 
     if 'total war'.encode('ascii', 'ignore') in message.content.lower().encode('ascii', 'ignore') and message.guild:
         await message.channel.send('Lisa needs to brace for the charge!')
