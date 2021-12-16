@@ -31,6 +31,10 @@ async def on_message(message):
     if 'total war'.encode('ascii', 'ignore') in message.content.lower().encode('ascii', 'ignore') and message.guild:
         await message.channel.send('You need at least sixteen pigs to finish the job in one sitting, so be wary of any man who keeps a pig farm. ... That means that a single pig can consume two pounds of uncooked flesh every minute. Hence the expression, "as greedy as a pig"')
 
+    if 'brace for the charge'.encode('ascii', 'ignore') in message.content.lower().encode('ascii', 'ignore') and message.guild:
+        await message.channel.send('What difference does it make to the dead, the orphans and the homeless, whether the mad destruction is wrought under the name of totalitarianism or in the holy name of liberty or democracy?')
+
+
     if not message.guild:
         await message.channel.send('not today mate')
 
