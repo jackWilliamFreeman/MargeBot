@@ -26,8 +26,10 @@ async def on_message(message):
         return
 
     if 'dental plan'.encode('ascii', 'ignore') in message.content.lower().encode('ascii', 'ignore') and message.guild:
-        print('Encouraging Drinking')
         await message.channel.send('Lisa Needs Braces')
+
+    if 'total war'.encode('ascii', 'ignore') in message.content.lower().encode('ascii', 'ignore') and message.guild:
+        await message.channel.send('You need at least sixteen pigs to finish the job in one sitting, so be wary of any man who keeps a pig farm. ... That means that a single pig can consume two pounds of uncooked flesh every minute. Hence the expression, "as greedy as a pig"')
 
     if not message.guild:
         await message.channel.send('not today mate')
