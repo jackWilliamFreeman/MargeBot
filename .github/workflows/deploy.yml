@@ -56,7 +56,7 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: ${{ secrets.REPO_NAME }}
-        cluster: cluster-demo
+        cluster: ${{ secrets.CLUSTER_NAME }}
         wait-for-service-stability: true
 
 
